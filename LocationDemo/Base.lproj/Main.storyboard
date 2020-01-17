@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="-310"/>
+        </scene>
+        <!--Pop UpVC-->
+        <scene sceneID="u8Y-hO-ree">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5YU-qT-L63" customClass="PopUpVC" customModule="LocationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Yk-sW-bfG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsY-BT-eXL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX0-Ee-DkI">
+                                        <rect key="frame" x="27" y="154" width="247" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="POPUP"/>
+                                        <connections>
+                                            <action selector="btn_POP:" destination="5YU-qT-L63" eventType="touchUpInside" id="HBr-YW-nhb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gsY-BT-eXL" secondAttribute="height" multiplier="207:448" id="Hl4-U4-4xn"/>
+                                    <constraint firstAttribute="width" constant="414" id="dpe-7o-vaZ"/>
+                                    <constraint firstAttribute="height" constant="896" id="l1I-6Y-XrL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gsY-BT-eXL" firstAttribute="leading" secondItem="1vl-ir-Pxh" secondAttribute="leading" id="03g-as-fMP"/>
+                            <constraint firstAttribute="bottom" secondItem="gsY-BT-eXL" secondAttribute="bottom" id="RXX-T9-eVf"/>
+                            <constraint firstItem="gsY-BT-eXL" firstAttribute="trailing" secondItem="1vl-ir-Pxh" secondAttribute="trailing" id="ruT-v8-1vT"/>
+                            <constraint firstItem="gsY-BT-eXL" firstAttribute="top" secondItem="8Yk-sW-bfG" secondAttribute="top" id="vPH-i3-nZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1vl-ir-Pxh"/>
+                    </view>
+                    <connections>
+                        <outlet property="img_temp" destination="8Mh-NV-H6e" id="dza-6J-8N5"/>
+                        <outlet property="vw_main" destination="gsY-BT-eXL" id="XHd-ZG-djq"/>
+                        <outlet property="vw_pop" destination="hqx-C1-t2Q" id="EF2-gt-ICv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LcE-mt-GNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="hqx-C1-t2Q">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1326445156_30052011_5" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-NV-H6e">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="135"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="IkT-HP-B4u"/>
+                                <constraint firstAttribute="height" constant="135" id="Urp-dX-IVq"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daS-b0-TfT">
+                            <rect key="frame" x="41.5" y="143" width="217" height="30"/>
+                            <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Pot-vw-Twq"/>
+                                <constraint firstAttribute="width" constant="217" id="fIe-t4-8Na"/>
+                            </constraints>
+                            <state key="normal" title="DELETE"/>
+                            <connections>
+                                <action selector="btn_DELETE:" destination="5YU-qT-L63" eventType="touchUpInside" id="f4q-fk-Myl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="8Mh-NV-H6e" firstAttribute="top" secondItem="hqx-C1-t2Q" secondAttribute="top" id="261-Zv-ZSd"/>
+                        <constraint firstItem="daS-b0-TfT" firstAttribute="centerX" secondItem="hqx-C1-t2Q" secondAttribute="centerX" id="73U-dD-eI6"/>
+                        <constraint firstItem="8Mh-NV-H6e" firstAttribute="centerX" secondItem="hqx-C1-t2Q" secondAttribute="centerX" id="9y4-gv-HLz"/>
+                        <constraint firstItem="daS-b0-TfT" firstAttribute="top" secondItem="8Mh-NV-H6e" secondAttribute="bottom" constant="8" id="ofd-jt-Kb2"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Ltu-Lj-Fub"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1024.6376811594205" y="-310.04464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1326445156_30052011_5" width="500" height="375"/>
+    </resources>
+</document>
